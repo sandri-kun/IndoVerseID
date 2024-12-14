@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +13,8 @@ function App() {
 
         {/* Rute ke Halaman Privacy Policy */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </Routes>
     </BrowserRouter>
   )
